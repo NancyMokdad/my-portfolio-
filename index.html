@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>نانسي مقداد – Portfolio</title>
+  <title>Nancy Mokdad – Web Developer & Social Innovator</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS for smooth animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <script>
     tailwind.config = {
       theme: {
@@ -24,6 +24,7 @@
   <style>
     body {
       scroll-behavior: smooth;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     .section-title {
       position: relative;
@@ -34,30 +35,33 @@
       content: '';
       position: absolute;
       bottom: -8px;
-      right: 0;
+      left: 0;
       width: 50px;
       height: 4px;
       background-color: #3B82F6;
       border-radius: 2px;
     }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Hero Section -->
-  <header class="bg-white py-16 px-4" data-aos="fade-down">
+  <!-- Hero -->
+  <header class="bg-white py-20 px-4" data-aos="fade-down">
     <div class="container mx-auto text-center max-w-2xl">
-      <div class="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-        <span class="text-5xl font-bold text-primary">ن</span>
+      <div class="w-32 h-32 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-6">
+        <span class="text-5xl font-bold text-primary">N</span>
       </div>
-      <h1 class="text-4xl md:text-5xl font-bold text-dark">نانسي مقداد</h1>
-      <p class="mt-3 text-xl text-gray-600">مطوّرة ويب • عاملة اجتماعية • مساعدة تسويق رقمي</p>
-      <div class="mt-4 flex justify-center gap-4 text-gray-500">
-        <span>+961 81254988</span> | 
-        <span>nancymokdad123@icloud.com</span>
-      </div>
-      <a href="#contact" class="mt-6 inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-        تواصلي معي
+      <h1 class="text-4xl md:text-5xl font-bold text-dark">Nancy Mokdad</h1>
+      <p class="mt-3 text-xl text-gray-600">Web Developer • Community Advocate • Digital Marketer</p>
+      <p class="mt-4 max-w-lg mx-auto text-gray-700">
+        I build digital solutions that bridge technology and social impact — especially for underserved communities.
+      </p>
+      <a href="#contact" class="mt-8 inline-block bg-primary text-white px-7 py-3 rounded-lg hover:bg-blue-700 transition shadow-md hover:shadow-lg">
+        Let's Work Together
       </a>
     </div>
   </header>
@@ -65,10 +69,13 @@
   <!-- About -->
   <section class="py-16 px-4 bg-white" id="about">
     <div class="container mx-auto max-w-4xl" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-dark section-title">من أنا؟</h2>
+      <h2 class="text-3xl font-bold text-dark section-title">About Me</h2>
       <p class="text-gray-700 leading-relaxed">
-        خريجة علوم حاسوب من الجامعة الإسلامية في لبنان، لدي خبرة في تطوير الويب والتطبيقات، بالإضافة إلى مشاركتي الفعالة في العمل المجتمعي والمساعدات الإنسانية.  
-        أؤمن بأن التكنولوجيا يجب أن تكون أداة للتغيير الإيجابي، خاصة في المجتمعات المحرومة.
+        I’m a Computer Science graduate from the Islamic University of Lebanon with hands-on experience in full-stack web development, mobile apps (Flutter), and digital marketing.  
+        But what truly drives me is using tech as a tool for social good — whether it’s building platforms for NGOs, managing child protection data, or helping families access humanitarian aid.
+      </p>
+      <p class="mt-4 text-gray-700">
+        I believe clean code and compassionate action can go hand in hand.
       </p>
     </div>
   </section>
@@ -76,69 +83,93 @@
   <!-- Skills -->
   <section class="py-16 px-4 bg-gray-50" id="skills">
     <div class="container mx-auto max-w-4xl" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-dark section-title">المهارات</h2>
-      <div class="grid md:grid-cols-2 gap-6 mt-8">
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="font-bold text-lg text-primary">التقنية</h3>
-          <ul class="mt-3 space-y-2 text-gray-700">
-            <li>HTML, CSS, JavaScript, PHP, MySQL</li>
-            <li>Flutter (Mobile Apps)</li>
-            <li>إدارة إعلانات فيسبوك</li>
-            <li>تصميم مواقع ويب تفاعلية</li>
+      <h2 class="text-3xl font-bold text-dark section-title">What I Do</h2>
+      <div class="grid md:grid-cols-2 gap-8 mt-10">
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <h3 class="font-bold text-lg text-primary flex items-center gap-2">
+            <i class="fas fa-code"></i> Development
+          </h3>
+          <ul class="mt-4 space-y-2 text-gray-700">
+            <li>• Frontend: HTML, CSS, JavaScript, Tailwind</li>
+            <li>• Backend: PHP, MySQL</li>
+            <li>• Mobile: Flutter</li>
+            <li>• Responsive & Accessible UIs</li>
           </ul>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="font-bold text-lg text-primary">الاجتماعية والتنظيمية</h3>
-          <ul class="mt-3 space-y-2 text-gray-700">
-            <li>إدارة دورة المشاريع</li>
-            <li>جمع البيانات والتقييم الميداني</li>
-            <li>حماية الطفل والعنف القائم على النوع</li>
-            <li>العمل مع المنظمات غير الحكومية</li>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <h3 class="font-bold text-lg text-primary flex items-center gap-2">
+            <i class="fas fa-hand-holding-heart"></i> Social Impact
+          </h3>
+          <ul class="mt-4 space-y-2 text-gray-700">
+            <li>• Community Needs Assessment</li>
+            <li>• Child Protection & GBV Awareness</li>
+            <li>• NGO Collaboration & Field Research</li>
+            <li>• Humanitarian Data Management</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <h3 class="font-bold text-lg text-primary flex items-center gap-2">
+            <i class="fas fa-bullseye"></i> Digital Marketing
+          </h3>
+          <ul class="mt-4 space-y-2 text-gray-700">
+            <li>• Facebook Ads Manager</li>
+            <li>• Social Media Campaigns</li>
+            <li>• Content Strategy for NGOs</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <h3 class="font-bold text-lg text-primary flex items-center gap-2">
+            <i class="fas fa-project-diagram"></i> Project Management
+          </h3>
+          <ul class="mt-4 space-y-2 text-gray-700">
+            <li>• Project Cycle Management</li>
+            <li>• Monitoring & Evaluation (M&E)</li>
+            <li>• Logistics & Compliance</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience / Projects -->
-  <section class="py-16 px-4 bg-white" id="experience">
+  <!-- Projects -->
+  <section class="py-16 px-4 bg-white" id="projects">
     <div class="container mx-auto max-w-4xl" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-dark section-title">الخبرات والمشاريع</h2>
+      <h2 class="text-3xl font-bold text-dark section-title">Selected Projects</h2>
       <div class="mt-10 space-y-8">
         
         <!-- Project 1 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-left">
-          <h3 class="text-xl font-bold">موقع جمعية الدليل</h3>
-          <p class="text-gray-600">2022 – الحاضر | بعلبك</p>
-          <p class="mt-2 text-gray-700">
-            تصميم وصيانة الموقع، إدارة الحملات الإعلانية، تنظيم جلسات توعية للأطفال، ودعم لوجستي لبرامج مجتمعية.
+        <div class="project-card bg-gray-50 p-6 rounded-xl shadow-sm transition" data-aos="fade-right">
+          <h3 class="text-xl font-bold">Al Daleel Association Website</h3>
+          <p class="text-gray-600 mt-1">Web Development • Digital Marketing • Community Engagement</p>
+          <p class="mt-3 text-gray-700">
+            Built and maintained a responsive website for a local NGO, while managing their social media campaigns and supporting field monitoring for child protection programs.
           </p>
         </div>
 
         <!-- Project 2 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-right">
-          <h3 class="text-xl font-bold">تطبيق جوال – Key in Hands</h3>
-          <p class="text-gray-600">2023 | تدريب</p>
-          <p class="mt-2 text-gray-700">
-            المساهمة في تطوير واختبار تطبيق جوال، وتنفيذ واجهات المستخدم وإصلاح الأخطاء البرمجية.
+        <div class="project-card bg-gray-50 p-6 rounded-xl shadow-sm transition" data-aos="fade-left">
+          <h3 class="text-xl font-bold">Mobile App Internship – Key in Hands</h3>
+          <p class="text-gray-600 mt-1">Flutter • UI Implementation • Bug Fixing</p>
+          <p class="mt-3 text-gray-700">
+            Contributed to the development of a mobile application by implementing UI designs and optimizing performance during testing phases.
           </p>
         </div>
 
         <!-- Project 3 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-left">
-          <h3 class="text-xl font-bold">تطبيق Mobimartech</h3>
-          <p class="text-gray-600">2024 | تدريب</p>
-          <p class="mt-2 text-gray-700">
-            تطوير تطبيق ويب وجوال باستخدام HTML, CSS, JS, و Flutter، مع تحسين الأداء وربط APIs.
+        <div class="project-card bg-gray-50 p-6 rounded-xl shadow-sm transition" data-aos="fade-right">
+          <h3 class="text-xl font-bold">E-Commerce Mobile App – Mobimartech</h3>
+          <p class="text-gray-600 mt-1">Flutter • API Integration • Responsive Design</p>
+          <p class="mt-3 text-gray-700">
+            Developed a cross-platform mobile app with real-time data fetching, focusing on user experience and performance optimization.
           </p>
         </div>
 
         <!-- Project 4 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-right">
-          <h3 class="text-xl font-bold">مشروع تخرجي – تطوير ويب</h3>
-          <p class="text-gray-600">2023 | الجامعة الإسلامية</p>
-          <p class="mt-2 text-gray-700">
-            تصميم صفحات ويب تفاعلية باستخدام PHP و MySQL، مع ربط قواعد البيانات وواجهات المستخدم.
+        <div class="project-card bg-gray-50 p-6 rounded-xl shadow-sm transition" data-aos="fade-left">
+          <h3 class="text-xl font-bold">Academic Web Project – IUL</h3>
+          <p class="text-gray-600 mt-1">PHP • MySQL • Full-Stack Development</p>
+          <p class="mt-3 text-gray-700">
+            Designed and built a dynamic web application with database connectivity, user authentication, and interactive dashboards.
           </p>
         </div>
       </div>
@@ -146,18 +177,18 @@
   </section>
 
   <!-- Contact -->
-  <section class="py-16 px-4 bg-gray-50 text-center" id="contact" data-aos="zoom-in">
+  <section class="py-20 px-4 bg-gray-50 text-center" id="contact" data-aos="zoom-in">
     <div class="container mx-auto max-w-2xl">
-      <h2 class="text-3xl font-bold text-dark section-title">تواصل معي</h2>
-      <p class="mt-4 text-gray-700">
-        مستعدة للتعاون في مشاريع تجمع بين التكنولوجيا والتأثير الاجتماعي.
+      <h2 class="text-3xl font-bold text-dark section-title">Get In Touch</h2>
+      <p class="mt-4 text-gray-700 max-w-lg mx-auto">
+        Have a project that combines tech and social impact? I’d love to hear about it.
       </p>
-      <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-        <a href="tel:+96181254988" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-          اتصلي بي
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:+96181254988" class="bg-primary text-white px-7 py-3 rounded-lg hover:bg-blue-700 transition shadow">
+          Call Me
         </a>
-        <a href="mailto:nancymokdad123@icloud.com" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition">
-          أرسلي بريدًا
+        <a href="mailto:nancymokdad123@icloud.com" class="border border-primary text-primary px-7 py-3 rounded-lg hover:bg-primary hover:text-white transition">
+          Email Me
         </a>
       </div>
     </div>
@@ -165,15 +196,11 @@
 
   <!-- Footer -->
   <footer class="py-6 text-center text-gray-500 text-sm bg-white">
-    &copy; 2026 نانسي مقداد. جميع الحقوق محفوظة.
+    &copy; 2026 Nancy Mokdad. All rights reserved.
   </footer>
 
-  <!-- Initialize AOS -->
   <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+    AOS.init({ duration: 800, once: true });
   </script>
 
 </body>
