@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>نانسي مقداد – Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- AOS for smooth animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -23,154 +25,155 @@
     body {
       scroll-behavior: smooth;
     }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
     }
-    .fade-in.appear {
-      opacity: 1;
-      transform: translateY(0);
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      width: 50px;
+      height: 4px;
+      background-color: #3B82F6;
+      border-radius: 2px;
     }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Header -->
-  <header class="bg-white shadow-sm py-6">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-primary animate__animated animate__fadeInDown">نانسي مقداد</h1>
-      <p class="mt-2 text-lg text-gray-600 animate__animated animate__fadeInUp">مطوّرة ويب • عاملة اجتماعية • مساعدة تسويق رقمي</p>
-      <div class="mt-3 text-gray-500 flex justify-center gap-4 flex-wrap">
-        <span>+961 81254988</span> | 
-        <span>nancymokdad123@icloud.com</span> | 
-        <span>بعلبك</span>
+  <!-- Hero Section -->
+  <header class="bg-white py-16 px-4" data-aos="fade-down">
+    <div class="container mx-auto text-center max-w-2xl">
+      <div class="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+        <span class="text-5xl font-bold text-primary">ن</span>
       </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-dark">نانسي مقداد</h1>
+      <p class="mt-3 text-xl text-gray-600">مطوّرة ويب • عاملة اجتماعية • مساعدة تسويق رقمي</p>
+      <div class="mt-4 flex justify-center gap-4 text-gray-500">
+        <span>+961 81254988</span> | 
+        <span>nancymokdad123@icloud.com</span>
+      </div>
+      <a href="#contact" class="mt-6 inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+        تواصلي معي
+      </a>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container mx-auto px-4 py-10 max-w-4xl">
-    
-    <!-- Objective -->
-    <section class="fade-in mb-10">
-      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">الهدف المهني</h2>
+  <!-- About -->
+  <section class="py-16 px-4 bg-white" id="about">
+    <div class="container mx-auto max-w-4xl" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-dark section-title">من أنا؟</h2>
       <p class="text-gray-700 leading-relaxed">
-        خريجة علوم حاسوب متحمسة، لدي خبرة قوية في العمل المجتمعي، التسويق الرقمي، وتطوير الويب. شغوفة باستخدام التكنولوجيا والمشاركة الاجتماعية لإحداث تأثير حقيقي في المجتمعات المحرومة. أبحث عن مشاريع تجمع بين الابتكار، التعاطف، والتنمية.
+        خريجة علوم حاسوب من الجامعة الإسلامية في لبنان، لدي خبرة في تطوير الويب والتطبيقات، بالإضافة إلى مشاركتي الفعالة في العمل المجتمعي والمساعدات الإنسانية.  
+        أؤمن بأن التكنولوجيا يجب أن تكون أداة للتغيير الإيجابي، خاصة في المجتمعات المحرومة.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills -->
-    <section class="fade-in mb-10">
-      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">المهارات</h2>
-      <ul class="list-disc pr-5 space-y-2 text-gray-700">
-        <li><strong>المهارات التقنية:</strong> تطوير الويب، تطوير تطبيقات الجوال، إدارة إعلانات فيسبوك، حملات التواصل الاجتماعي، إتقان الحاسوب.</li>
-        <li><strong>المهارات التنظيمية:</strong> إدارة دورة المشاريع، المراقبة والتقييم، الشؤون المالية واللوجستية، ضمان الجودة.</li>
-        <li><strong>العمل المجتمعي:</strong> تنظيم جلسات توعية، جمع البيانات، شراكات مع منظمات محلية.</li>
-        <li><strong>جمع البيانات:</strong> استبيانات، تقييم الاحتياجات، إدارة بيانات مجتمعية في سياقات إنسانية.</li>
-        <li><strong>المهارات الشخصية:</strong> التواصل، القيادة، العمل الجماعي، إدارة الوقت، حل المشكلات.</li>
-      </ul>
-    </section>
-
-    <!-- Experience -->
-    <section class="fade-in mb-10">
-      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">الخبرة العملية</h2>
-      
-      <div class="mb-6">
-        <h3 class="font-bold text-lg">جمعية الدليل – بعلبك</h3>
-        <p class="text-gray-600">مساعدة إدارية – مديرة إعلانات – مديرة موقع – منشطة | 2022 – الحاضر</p>
-        <ul class="list-disc pr-5 mt-2 text-gray-700">
-          <li>إدارة الإعلانات الرقمية وحضور المنظمة على وسائل التواصل.</li>
-          <li>تصميم وصيانة موقع الجمعية.</li>
-          <li>دعم لوجستي وإداري لبرامج مجتمعية.</li>
-          <li>تنفيذ مراقبة وتقييم لمشروع حماية الطفل.</li>
-          <li>تنظيم جلسات توعية للأطفال.</li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h3 class="font-bold text-lg">Key in Hands – تدريب تطوير تطبيقات</h3>
-        <p class="text-gray-600">بعلبك | 2023</p>
-        <ul class="list-disc pr-5 mt-2 text-gray-700">
-          <li>المساهمة في تطوير واختبار تطبيق جوال.</li>
-          <li>دعم تنفيذ واجهات المستخدم وإصلاح الأخطاء.</li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h3 class="font-bold text-lg">Mobimartech – تدريب تطوير ويب وتطبيقات</h3>
-        <p class="text-gray-600">بعلبك | 2024</p>
-        <ul class="list-disc pr-5 mt-2 text-gray-700">
-          <li>تطبيق أفضل ممارسات الواجهات الأمامية (HTML, CSS, JS, Flutter).</li>
-          <li>التعاون في تطوير تطبيقات متجاوبة وربط APIs.</li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h3 class="font-bold text-lg">تدريب جامعي – تطوير ويب</h3>
-        <p class="text-gray-600">الجامعة الإسلامية في لبنان | 2023</p>
-        <ul class="list-disc pr-5 mt-2 text-gray-700">
-          <li>تصميم صفحات ويب تفاعلية باستخدام PHP, MySQL, HTML, CSS.</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-lg">عمل حر – منطقة بعلبك</h3>
-        <p class="text-gray-600">مساعدة في تعبئة الاستمارات | 2022 – الحاضر</p>
-        <ul class="list-disc pr-5 mt-2 text-gray-700">
-          <li>مساعدة العائلات في تعبئة استمارات المساعدات الإنسانية.</li>
-          <li>ضمان سرية البيانات واحترام الخصوصية.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Education & Workshops -->
-    <section class="fade-in mb-10">
-      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">التعليم والورش</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <h3 class="font-bold">التعليم</h3>
-          <ul class="mt-2 text-gray-700">
-            <li>بكالوريوس علوم حاسوب – الجامعة الإسلامية – 2021–2024</li>
-            <li>دبلوم سلامة الأغذية – المعهد التقني – بعلبك</li>
+  <!-- Skills -->
+  <section class="py-16 px-4 bg-gray-50" id="skills">
+    <div class="container mx-auto max-w-4xl" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-dark section-title">المهارات</h2>
+      <div class="grid md:grid-cols-2 gap-6 mt-8">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-lg text-primary">التقنية</h3>
+          <ul class="mt-3 space-y-2 text-gray-700">
+            <li>HTML, CSS, JavaScript, PHP, MySQL</li>
+            <li>Flutter (Mobile Apps)</li>
+            <li>إدارة إعلانات فيسبوك</li>
+            <li>تصميم مواقع ويب تفاعلية</li>
           </ul>
         </div>
-        <div>
-          <h3 class="font-bold">ورش عمل</h3>
-          <ul class="mt-2 text-gray-700 list-disc pr-5">
-            <li>سلامة الغذاء والصحة</li>
-            <li>العنف القائم على النوع الاجتماعي</li>
-            <li>حماية الطفل</li>
-            <li>إدارة المشاريع والتمويل</li>
-            <li>التسويق وريادة الأعمال</li>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-bold text-lg text-primary">الاجتماعية والتنظيمية</h3>
+          <ul class="mt-3 space-y-2 text-gray-700">
+            <li>إدارة دورة المشاريع</li>
+            <li>جمع البيانات والتقييم الميداني</li>
+            <li>حماية الطفل والعنف القائم على النوع</li>
+            <li>العمل مع المنظمات غير الحكومية</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Languages -->
-    <section class="fade-in mb-10">
-      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">اللغات</h2>
-      <p class="text-gray-700">العربية – الفرنسية – الإنجليزية</p>
-    </section>
+  <!-- Experience / Projects -->
+  <section class="py-16 px-4 bg-white" id="experience">
+    <div class="container mx-auto max-w-4xl" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-dark section-title">الخبرات والمشاريع</h2>
+      <div class="mt-10 space-y-8">
+        
+        <!-- Project 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-left">
+          <h3 class="text-xl font-bold">موقع جمعية الدليل</h3>
+          <p class="text-gray-600">2022 – الحاضر | بعلبك</p>
+          <p class="mt-2 text-gray-700">
+            تصميم وصيانة الموقع، إدارة الحملات الإعلانية، تنظيم جلسات توعية للأطفال، ودعم لوجستي لبرامج مجتمعية.
+          </p>
+        </div>
 
-    <!-- Footer -->
-    <footer class="text-center text-gray-500 text-sm pt-6 border-t">
-      &copy; 2026 نانسي مقداد. جميع الحقوق محفوظة.
-    </footer>
-  </main>
+        <!-- Project 2 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-right">
+          <h3 class="text-xl font-bold">تطبيق جوال – Key in Hands</h3>
+          <p class="text-gray-600">2023 | تدريب</p>
+          <p class="mt-2 text-gray-700">
+            المساهمة في تطوير واختبار تطبيق جوال، وتنفيذ واجهات المستخدم وإصلاح الأخطاء البرمجية.
+          </p>
+        </div>
 
-  <!-- Scroll Animation Script -->
+        <!-- Project 3 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-left">
+          <h3 class="text-xl font-bold">تطبيق Mobimartech</h3>
+          <p class="text-gray-600">2024 | تدريب</p>
+          <p class="mt-2 text-gray-700">
+            تطوير تطبيق ويب وجوال باستخدام HTML, CSS, JS, و Flutter، مع تحسين الأداء وربط APIs.
+          </p>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-right">
+          <h3 class="text-xl font-bold">مشروع تخرجي – تطوير ويب</h3>
+          <p class="text-gray-600">2023 | الجامعة الإسلامية</p>
+          <p class="mt-2 text-gray-700">
+            تصميم صفحات ويب تفاعلية باستخدام PHP و MySQL، مع ربط قواعد البيانات وواجهات المستخدم.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-16 px-4 bg-gray-50 text-center" id="contact" data-aos="zoom-in">
+    <div class="container mx-auto max-w-2xl">
+      <h2 class="text-3xl font-bold text-dark section-title">تواصل معي</h2>
+      <p class="mt-4 text-gray-700">
+        مستعدة للتعاون في مشاريع تجمع بين التكنولوجيا والتأثير الاجتماعي.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:+96181254988" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          اتصلي بي
+        </a>
+        <a href="mailto:nancymokdad123@icloud.com" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition">
+          أرسلي بريدًا
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm bg-white">
+    &copy; 2026 نانسي مقداد. جميع الحقوق محفوظة.
+  </footer>
+
+  <!-- Initialize AOS -->
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('appear');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    AOS.init({
+      duration: 800,
+      once: true
+    });
   </script>
 
 </body>
