@@ -1,113 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nancy Mokdad - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>نانسي مقداد – Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            dark: '#1E293B',
+            light: '#F8FAFC'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>NANCY MOKDAD</h1>
-        <p>Web Developer – Social Worker – Digital Marketing Assistant</p>
-        <p>+961 81254988 | NANCYMOKDAD123@ICLOUD.COM | BAALBECK</p>
-    </header>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <section id="objective">
-        <h2>OBJECTIVE</h2>
-        <p>Motivated computer science graduate with strong experience in community work, digital marketing, and web development. Passionate about using technology and social engagement to create real impact in underserved communities. Looking to contribute to projects that combine innovation, compassion, and development.</p>
+  <!-- Header -->
+  <header class="bg-white shadow-sm py-6">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-primary animate__animated animate__fadeInDown">نانسي مقداد</h1>
+      <p class="mt-2 text-lg text-gray-600 animate__animated animate__fadeInUp">مطوّرة ويب • عاملة اجتماعية • مساعدة تسويق رقمي</p>
+      <div class="mt-3 text-gray-500 flex justify-center gap-4 flex-wrap">
+        <span>+961 81254988</span> | 
+        <span>nancymokdad123@icloud.com</span> | 
+        <span>بعلبك</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-10 max-w-4xl">
+    
+    <!-- Objective -->
+    <section class="fade-in mb-10">
+      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">الهدف المهني</h2>
+      <p class="text-gray-700 leading-relaxed">
+        خريجة علوم حاسوب متحمسة، لدي خبرة قوية في العمل المجتمعي، التسويق الرقمي، وتطوير الويب. شغوفة باستخدام التكنولوجيا والمشاركة الاجتماعية لإحداث تأثير حقيقي في المجتمعات المحرومة. أبحث عن مشاريع تجمع بين الابتكار، التعاطف، والتنمية.
+      </p>
     </section>
 
-    <section id="skills">
-        <h2>SKILLS & ABILITIES</h2>
-        <ul>
-            <li><strong>Technical Skills:</strong> Web Development, Mobile App Development, Digital Marketing (Ads Manager), Social Media Campaigns, Computer Proficiency (MS Office, Internet Tools)</li>
-            <li><strong>Organizational Skills:</strong> Project Cycle Management, Monitoring & Evaluation, Finance & Logistics, Compliance & Accountability, Quality Control (Food Industries)</li>
-            <li><strong>Social Engagement:</strong> Actively involved in community development through awareness sessions, training, data collection, and partnerships with local NGOs.</li>
-            <li><strong>Data Collection & Field Research:</strong> Skilled in conducting surveys, needs assessments, and managing community data, especially within humanitarian contexts.</li>
-            <li><strong>Personal & Social Skills:</strong> Communication, Leadership, Teamwork, Classroom Management, External Relations, Planning & Organization, Handling Learning Difficulties, Time Management & Multitasking.</li>
-            <li><strong>Creative & Strategic Thinking:</strong> Business Planning, Campaign Management, Problem Solving</li>
+    <!-- Skills -->
+    <section class="fade-in mb-10">
+      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">المهارات</h2>
+      <ul class="list-disc pr-5 space-y-2 text-gray-700">
+        <li><strong>المهارات التقنية:</strong> تطوير الويب، تطوير تطبيقات الجوال، إدارة إعلانات فيسبوك، حملات التواصل الاجتماعي، إتقان الحاسوب.</li>
+        <li><strong>المهارات التنظيمية:</strong> إدارة دورة المشاريع، المراقبة والتقييم، الشؤون المالية واللوجستية، ضمان الجودة.</li>
+        <li><strong>العمل المجتمعي:</strong> تنظيم جلسات توعية، جمع البيانات، شراكات مع منظمات محلية.</li>
+        <li><strong>جمع البيانات:</strong> استبيانات، تقييم الاحتياجات، إدارة بيانات مجتمعية في سياقات إنسانية.</li>
+        <li><strong>المهارات الشخصية:</strong> التواصل، القيادة، العمل الجماعي، إدارة الوقت، حل المشكلات.</li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section class="fade-in mb-10">
+      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">الخبرة العملية</h2>
+      
+      <div class="mb-6">
+        <h3 class="font-bold text-lg">جمعية الدليل – بعلبك</h3>
+        <p class="text-gray-600">مساعدة إدارية – مديرة إعلانات – مديرة موقع – منشطة | 2022 – الحاضر</p>
+        <ul class="list-disc pr-5 mt-2 text-gray-700">
+          <li>إدارة الإعلانات الرقمية وحضور المنظمة على وسائل التواصل.</li>
+          <li>تصميم وصيانة موقع الجمعية.</li>
+          <li>دعم لوجستي وإداري لبرامج مجتمعية.</li>
+          <li>تنفيذ مراقبة وتقييم لمشروع حماية الطفل.</li>
+          <li>تنظيم جلسات توعية للأطفال.</li>
         </ul>
-    </section>
+      </div>
 
-    <section id="experience">
-        <h2>EXPERIENCE</h2>
-        <div class="job">
-            <h3>AL DALEEL ASSOCIATION – BAALBACK</h3>
-            <p>Administrative Assistant – Ads Manager – Web Manager – Animator | 2022 | present</p>
-            <ul>
-                <li>Managed online advertising and social media presence using Ads Manager.</li>
-                <li>Designed and maintained the association’s website.</li>
-                <li>Supported logistics and administrative tasks for various community programs.</li>
-                <li>Conducted field monitoring and evaluations for a child protection project, including timeline planning, data collection, and end-line assessments.</li>
-                <li>Organized and animated learning and awareness sessions for children in ASE center.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Key in Hands – Mobile Application Development Intern</h3>
-            <p>Baalbek | 2023</p>
-            <ul>
-                <li>Contributed to the development and testing of a mobile application.</li>
-                <li>Assisted in implementing user interface designs and fixing performance bugs.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Mobimartech – Web and Mobile App Development Intern</h3>
-            <p>Baalbek | 2024</p>
-            <ul>
-                <li>Applied best practices in front-end design using HTML, CSS, JavaScript, and Flutter.</li>
-                <li>Participated in the design and development of a responsive web and mobile application.</li>
-                <li>Collaborated with developers on integrating APIs and optimizing app performance.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>University Internship – Web Development</h3>
-            <p>Islamic University of Lebanon | 2023</p>
-            <ul>
-                <li>Focused on creating user-friendly layouts and maintaining database connectivity.</li>
-                <li>Completed a web development internship as part of the academic program.</li>
-                <li>Designed and built interactive web pages using PHP, MySQL, HTML, and CSS.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Freelance – Baalbek Region</h3>
-            <p>Form Filling Assistant | 2022 | Present</p>
-            <ul>
-                <li>Assisted families and individuals in accurately completing official and humanitarian aid forms.</li>
-                <li>Supported clients in understanding and accessing services related to health, education, and social protection.</li>
-                <li>Ensured sensitive handling of data and maintained confidentiality.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>EDUCATION</h2>
-        <p>2021 – 2024: Bachelor’s Degree in Computer Science, Islamic University of Lebanon – Baalbek Branch</p>
-        <p>Food Safety and Health Control Diploma, Baalbek Technical Institute</p>
-    </section>
-
-    <section id="workshops">
-        <h2>WORKSHOPS</h2>
-        <ul>
-            <li>Health and Food Safety Training</li>
-            <li>Gender-Based Violence (GBV) Core Concepts</li>
-            <li>Prevention of Sexual Exploitation and Abuse (PSEA)</li>
-            <li>Child Protection Awareness</li>
-            <li>External Relations & Project Cycle Management</li>
-            <li>Finance, Human Resources & Logistics</li>
-            <li>Organizational Management, Compliance & Accountability</li>
-            <li>Marketing & Entrepreneurship</li>
-            <li>Project Management & Proposal Writing</li>
+      <div class="mb-6">
+        <h3 class="font-bold text-lg">Key in Hands – تدريب تطوير تطبيقات</h3>
+        <p class="text-gray-600">بعلبك | 2023</p>
+        <ul class="list-disc pr-5 mt-2 text-gray-700">
+          <li>المساهمة في تطوير واختبار تطبيق جوال.</li>
+          <li>دعم تنفيذ واجهات المستخدم وإصلاح الأخطاء.</li>
         </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="font-bold text-lg">Mobimartech – تدريب تطوير ويب وتطبيقات</h3>
+        <p class="text-gray-600">بعلبك | 2024</p>
+        <ul class="list-disc pr-5 mt-2 text-gray-700">
+          <li>تطبيق أفضل ممارسات الواجهات الأمامية (HTML, CSS, JS, Flutter).</li>
+          <li>التعاون في تطوير تطبيقات متجاوبة وربط APIs.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="font-bold text-lg">تدريب جامعي – تطوير ويب</h3>
+        <p class="text-gray-600">الجامعة الإسلامية في لبنان | 2023</p>
+        <ul class="list-disc pr-5 mt-2 text-gray-700">
+          <li>تصميم صفحات ويب تفاعلية باستخدام PHP, MySQL, HTML, CSS.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg">عمل حر – منطقة بعلبك</h3>
+        <p class="text-gray-600">مساعدة في تعبئة الاستمارات | 2022 – الحاضر</p>
+        <ul class="list-disc pr-5 mt-2 text-gray-700">
+          <li>مساعدة العائلات في تعبئة استمارات المساعدات الإنسانية.</li>
+          <li>ضمان سرية البيانات واحترام الخصوصية.</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="languages">
-        <h2>LANGUAGES</h2>
-        <p>Arabic - French - English</p>
+    <!-- Education & Workshops -->
+    <section class="fade-in mb-10">
+      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">التعليم والورش</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-bold">التعليم</h3>
+          <ul class="mt-2 text-gray-700">
+            <li>بكالوريوس علوم حاسوب – الجامعة الإسلامية – 2021–2024</li>
+            <li>دبلوم سلامة الأغذية – المعهد التقني – بعلبك</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">ورش عمل</h3>
+          <ul class="mt-2 text-gray-700 list-disc pr-5">
+            <li>سلامة الغذاء والصحة</li>
+            <li>العنف القائم على النوع الاجتماعي</li>
+            <li>حماية الطفل</li>
+            <li>إدارة المشاريع والتمويل</li>
+            <li>التسويق وريادة الأعمال</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 Nancy Mokdad. All rights reserved.</p>
+    <!-- Languages -->
+    <section class="fade-in mb-10">
+      <h2 class="text-2xl font-bold text-dark border-b-2 border-primary pb-2 mb-4">اللغات</h2>
+      <p class="text-gray-700">العربية – الفرنسية – الإنجليزية</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm pt-6 border-t">
+      &copy; 2026 نانسي مقداد. جميع الحقوق محفوظة.
     </footer>
+  </main>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
